@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Admin App&amp;Eat</string>
+
+    <string name="facebook_application_id">444035258183779</string>
+    <string name="fb_login_protocol_scheme">fb444035258183779</string>
+    <string name="facebook_client_token">484cd7087f4bbb911fa3100571fc235a</string>
+
+
+    <string name="twitter_consumer_key" translatable="false"> NAM50XWAKj9XKRFnlmyVcJSE8 </string>
+    <string name="twitter_consumer_secret" translatable="false"> xiYFSTkfYMo6M9jj9vD6LvtUMLYjVq05cyTE5YEETcmHH2S9wQ </string>
+
+</resources>
