@@ -26,6 +26,7 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var email: String
     private lateinit var password: String
     private lateinit var database: DatabaseReference
+    private lateinit var location : String
     lateinit var binding: ActivitySignUpBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,8 +50,9 @@ class SignUpActivity : AppCompatActivity() {
             nameOfRestaurant = binding.nameOfRestaurant.text.toString().trim()
             email = binding.email.text.toString().trim()
             password = binding.password.text.toString().trim()
+            location = binding.LISTOFLOCATION.text.toString().trim()
 
-            if (userName.isBlank() || nameOfRestaurant.isBlank() || email.isBlank() || password.isBlank()) {
+            if (userName.isBlank() && nameOfRestaurant.isBlank() && email.isBlank() && password.isBlank() && location.isBlank() ) {
                 Toast.makeText(this, "Please Fill All Details", Toast.LENGTH_SHORT).show()
             } else {
                 createAccount(email, password)
@@ -89,8 +91,9 @@ class SignUpActivity : AppCompatActivity() {
         nameOfRestaurant = binding.nameOfRestaurant.text.toString().trim()
         email = binding.email.text.toString().trim()
         password = binding.password.text.toString().trim()
+        location = binding.LISTOFLOCATION.text.toString().trim()
 
-        val user =UserModal(userName , nameOfRestaurant , email , password)
+        val user = UserModal(userName , nameOfRestaurant , email ,  location)
         val userId = FirebaseAuth.getInstance().currentUser!!.uid
         database.child("user").child(userId).setValue(user)
     }

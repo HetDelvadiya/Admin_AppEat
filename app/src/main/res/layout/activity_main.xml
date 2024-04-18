@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bergihan"
-        android:text="App&amp;Food"
+        android:text="App&amp;Eat"
         android:textSize="40sp"
         android:textColor="#0E554B"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
@@ -85,13 +85,12 @@
                     app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
                 <TextView
-                    android:id="@+id/pending_order"
+                    android:id="@+id/pendingOrders"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/latobold"
-                    android:text="30"
                     android:textColor="#FF5722"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -138,7 +137,6 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/latobold"
-                    android:text="20"
                     android:textColor="#4CAF50"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -178,13 +176,12 @@
                     app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
                 <TextView
-                    android:id="@+id/total_earning"
+                    android:id="@+id/totalEarnings"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/latobold"
-                    android:text="2000"
                     android:textColor="@color/yello"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"

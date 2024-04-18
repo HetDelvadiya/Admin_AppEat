@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.awcindia.adminappeat.databinding.DeliveryItemBinding
 
-class deliveryAdapter(private val customerNames: MutableList<String>, private val moneyStatus: MutableList<String>) : RecyclerView.Adapter<deliveryAdapter.deliveryViewHolder>() {
+class deliveryAdapter(private val customerNames: MutableList<String>, private val moneyStatus: MutableList<Boolean>) : RecyclerView.Adapter<deliveryAdapter.deliveryViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): deliveryViewHolder {
@@ -29,9 +29,14 @@ class deliveryAdapter(private val customerNames: MutableList<String>, private va
             binding.apply {
 
                 customerName.text = customerNames[position]
-                payment.text = moneyStatus[position]
+                if (moneyStatus[position] == true){
+                    payment.text = "Receiverd"
+                }else{
+                    payment.text = "Not Received"
+                }
 
-                val colorMap = mapOf("Receiverd" to Color.GREEN , "Not Received" to Color.RED , "Panding" to Color.GRAY)
+
+                val colorMap = mapOf(true to Color.GREEN , false to Color.RED )
 
                 payment.setTextColor(colorMap[moneyStatus[position]]?:Color.BLACK)
 
