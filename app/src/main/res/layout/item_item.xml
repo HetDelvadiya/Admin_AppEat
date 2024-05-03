@@ -79,49 +79,14 @@
                 app:layout_constraintTop_toTopOf="@+id/textView11" />
 
             <ImageButton
-                android:id="@+id/removeButton"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="@drawable/add"
-                android:src="@drawable/minus"
-                app:layout_constraintBottom_toBottomOf="@+id/NubOfItem"
-                app:layout_constraintEnd_toStartOf="@+id/NubOfItem"
-                app:layout_constraintTop_toTopOf="@+id/NubOfItem"
-                tools:ignore="SpeakableTextPresentCheck" />
-
-            <ImageButton
-                android:id="@+id/AddButton"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/add"
-                android:src="@drawable/plus"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="SpeakableTextPresentCheck" />
-
-            <TextView
-                android:id="@+id/NubOfItem"
-                android:layout_width="24sp"
-                android:layout_height="24sp"
-                android:text="1"
-                android:gravity="center"
-                app:layout_constraintBottom_toBottomOf="@+id/AddButton"
-                app:layout_constraintEnd_toStartOf="@+id/AddButton"
-                app:layout_constraintTop_toTopOf="@+id/AddButton" />
-
-            <ImageButton
                 android:id="@+id/deleteButton"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginEnd="40dp"
-                android:layout_marginBottom="8dp"
                 android:src="@drawable/delete"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/NubOfItem"
-                app:layout_constraintVertical_bias="1.0"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="SpeakableTextPresentCheck" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

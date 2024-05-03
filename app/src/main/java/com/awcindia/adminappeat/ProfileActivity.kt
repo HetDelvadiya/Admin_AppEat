@@ -71,19 +71,24 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun updateUserData() {
 
-       val updateName =  binding.name.text.toString()
+        val updateName = binding.name.text.toString()
         val updateRestaurants = binding.restaurants.text.toString()
-        val updateEmail =binding.email.text.toString()
-        val updateAddress =binding.address.text.toString()
-        val updatePhone  = binding.phoneNum.text.toString()
+        val updateEmail = binding.email.text.toString()
+        val updateAddress = binding.address.text.toString()
+        val updatePhone = binding.phoneNum.text.toString()
 
-        val userData = UserModal(updateName, updateRestaurants , updateEmail , updateAddress , updatePhone)
-        adminReference.setValue(userData).addOnSuccessListener {
-            Toast.makeText(this , "Profile Updated" , Toast.LENGTH_SHORT).show()
-            auth.currentUser?.updateEmail(updateEmail)
+        if (updateName.isBlank() || updateEmail.isBlank() || updateAddress.isBlank() || updateRestaurants.isBlank() || updatePhone.isBlank()) {
+            Toast.makeText(this, "Please Fill All Details", Toast.LENGTH_SHORT).show()
+        } else {
+            val userData =
+                UserModal(updateName, updateRestaurants, updateEmail, updateAddress, updatePhone)
+            adminReference.setValue(userData).addOnSuccessListener {
+                Toast.makeText(this, "Profile Updated", Toast.LENGTH_SHORT).show()
+                auth.currentUser?.updateEmail(updateEmail)
 
-        }.addOnFailureListener {
-            Toast.makeText(this , "Some Thing Wrong" , Toast.LENGTH_SHORT).show()
+            }.addOnFailureListener {
+                Toast.makeText(this, "Some Thing Wrong", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

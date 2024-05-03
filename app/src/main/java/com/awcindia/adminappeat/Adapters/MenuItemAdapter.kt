@@ -48,43 +48,11 @@ class MenuItemAdapter(
                 allFoodName.text = menuItem.foodName
                 allItemPrice.text = menuItem.foodPrice
                 Glide.with(context).load(uri).into(allItemFoodimage)
-                NubOfItem.text = quantity.toString()
-
-                removeButton.setOnClickListener{
-                    DecreaseQuantity(position)
-                }
-
-                AddButton.setOnClickListener {
-                    IncreaseQuantity(position)
-                }
 
                 deleteButton.setOnClickListener {
                     onDeleteClickListener(position)
                 }
-
-            }
-
-        }
-
-
-        fun DecreaseQuantity(position: Int){
-            if (itemQuantities[position] >1){
-                itemQuantities[position]--
-                binding.NubOfItem.text = itemQuantities[position].toString()
             }
         }
-
-        fun IncreaseQuantity(position: Int){
-            if (itemQuantities[position] <20){
-                itemQuantities[position]++
-                binding.NubOfItem.text = itemQuantities[position].toString()
-            }
-        }
-
-
     }
-
-
-
-
 }
